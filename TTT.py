@@ -6,4 +6,3 @@ field = f" {star[0]} │ {star[1]} │ {star[2]} \n─────────�
 player = "Mägnija 1"
 player2 = "Mägnija 2"
 
-while victory < 1:
