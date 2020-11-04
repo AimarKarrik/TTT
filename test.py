@@ -1,4 +1,6 @@
-lis = ["üks", "kaks", "kolm"]
-print(lis)
-lis[1] = "2"
-print(lis)
+tekst = "Tere"
+
+def prindi(t):
+    prindi(t)
+
+prindi(tekst)

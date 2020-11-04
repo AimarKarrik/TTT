@@ -52,14 +52,14 @@ while i != 9:
     slots = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
     field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
     while True:
-        print(field)
 
-        location = int(input("Kuhu soovite mängida?")) - 1
+        location = int(input("Kuhu soovite mängida?"))
         
         if slots[location] == "x" or slots[location] == "o":
             print("See koht on täidetud!")
         else:
             slots[location] = "x"
+            field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
             print(field)
             break
     
@@ -69,7 +69,6 @@ while i != 9:
         print("x võitis!")
 
     while True:
-        print(field)
 
         location = int(input("Kuhu soovite mängida?"))
         
@@ -77,6 +76,7 @@ while i != 9:
             print("See koht on täidetud!")
         else:
             slots[location] = "o"
+            field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
             print(field)
             break
     
