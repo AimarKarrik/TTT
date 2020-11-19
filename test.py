@@ -1,6 +1,7 @@
-tekst = "Tere"
+tekst = True
 
 def prindi(t):
-    prindi(t)
+    return tekst = False
 
 prindi(tekst)
+print(tekst)
