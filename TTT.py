@@ -1,3 +1,4 @@
+
 def victorycheck(sl):
     if sl[0] == sl[3] and sl[0] == sl[6]:
         return True
@@ -25,6 +26,10 @@ def xplays(sl):
             print("See koht on täidetud!")
         else:
             slots[location] = "x"
+            field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
+            print(field)
+            break
+
 
 def oplays(sl):
     while True:
@@ -35,23 +40,22 @@ def oplays(sl):
             print("See koht on täidetud!")
         else:
             slots[location] = "o"
+            field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
+            print(field)
+            break
 
-location = 0
 i = 0
 slots = ["0", "1", "2", "3", "4", "5", "6", "7", "8"]
 field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
 
 while i != 9:
+    i = i + 1
     xplays(slots)
-    field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
-    print(field)
     if victorycheck(slots) == True:
         print("X Võitis")
         break
     
     oplays(slots)
-    field = f" {slots[0]} │ {slots[1]} │ {slots[2]} \n───────────\n {slots[3]} │ {slots[4]} │ {slots[5]} \n───────────\n {slots[6]} │ {slots[7]} │ {slots[8]} "
-    print(field)
     if victorycheck(slots) == True:
         print("O Võitis")
         break
